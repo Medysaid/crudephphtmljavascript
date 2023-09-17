@@ -164,7 +164,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         // Process the received data (e.g., save it to a database)
         // For this example, we'll just return the received data
         header("Content-Type: application/json");
-        echo json_encode($requestData);
+        $res = [
+            "response"=>$requestData,
+            "body" => ["response" => true],
+            "status" => "200", // Corrected key name to "status"
+        ];
+        
+        echo json_encode($res);
     } else {
         http_response_code(400); // Bad Request
         echo json_encode(["message" => "Invalid JSON data"]);

@@ -7,20 +7,24 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./assets/index.css">
-        <link
+       <link
   href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
   rel="stylesheet" />
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
 <script src="https://cdn.tailwindcss.com/3.3.0"></script>
-
+<link rel="stylesheet" href="./assets/index.css">
+<link rel="stylesheet" href="./assets/modal.css">
+        
     </head>
     <body>
-        <div class="w-full">
-            <div class="overflow-x-auto">
-                <div class="w-full">
+        <div class="mainTable">
+         
+                <div class="child">
+                  <button id="myBtn" class="btn-magin btn bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    Add Data
+                  </button>
                     <table class="min-w-full border-collapse table-auto">
                       <thead>
                         <tr>
@@ -36,9 +40,82 @@
                   </div>
                   
               </div>
-          </div>
+              <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Add Data</h2>
+                  </div>
+                  <div class="modal-body">
+                    <div class=" mx-auto p-4">
+                     
+                    <form  class=" ">
+                      <!-- Name field -->
+                      <div class="mb-4">
+                          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                              Name
+                          </label>
+                          <input
+                              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                              id="name"
+                              name="name"
+                              type="text"
+                              placeholder="Your Name"
+                              required
+                          >
+                      </div>
+          
+                      <!-- Email field -->
+                      <div class="mb-4">
+                          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                            Postion
+                          </label>
+                          <input
+                              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                              id="postion"
+                              name="postion"
+                              type="text"
+                              placeholder="Postion"
+                              required
+                          >
+                      </div>
+                      <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                          Salary
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="salary"
+                            name="salary"
+                            type="salary"
+                            placeholder="salary"
+                            required
+                        >
+                    </div>
+                      <!-- Submit button -->
+                      <div class="mb-6 text-center">
+                      
+                      </div>
+                  </form>
+                  <!-- Form ends here -->
+              </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button onclick="saveData()"   class="  bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                      Save
+                    </button>
+                  </div>
+                </div>
+              
+              </div>
          
         <script src="./assets/index.js" async defer></script>
+        <script src="./assets/modal.js">
+          
+          </script>
+          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </html>
 
